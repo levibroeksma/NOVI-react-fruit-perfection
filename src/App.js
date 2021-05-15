@@ -5,7 +5,10 @@ import citroenen from './assets/citroenen.jpeg';
 import limoenen from './assets/limoenen.png';
 import ijsblokjes from './assets/ijsblokjes.jpg';
 import { ReactComponent as ShoppingCart } from './assets/winkelmandje.svg';
+
 function App() {
+  const [messageValue, setMessageValue] = React.useState('');
+
   return (
       <>
       <header>
@@ -37,6 +40,21 @@ function App() {
               description="Een ijsblokje of ijsklontje is bevroren water in de vorm van een klein blokje. Het wordt gemaakt in een diepvriezer door water in een plastic vorm te laten bevriezen."
           />
       </main>
+          <footer>
+              <div className="form-containt">
+                  <h2>Contactformulier</h2>
+                  <form action="">
+                      <input
+                          type="text"
+                          placeholder="Typ hier jouw bericht"
+                          name="message"
+                          value={messageValue}
+                          onChange={(e) => setMessageValue(e.target.value)}
+                      />
+                  </form>
+                  <button type="submit">Verstuur</button>
+              </div>
+          </footer>
       </>
   );
 }
