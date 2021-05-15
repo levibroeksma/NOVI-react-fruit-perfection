@@ -8,6 +8,7 @@ import { ReactComponent as ShoppingCart } from './assets/winkelmandje.svg';
 function App() {
   return (
       <>
+      <header>
           <nav>
               <ul>
                   <li>Shop</li>
@@ -16,7 +17,6 @@ function App() {
               </ul>
               <ShoppingCart className="shopping-cart-icon"/>
           </nav>
-      <header>
           <h1>Fruit perfection</h1>
           <button type="button" onClick={() => console.log("Jij wil shoppen!")}>Shop nu</button>
       </header>
